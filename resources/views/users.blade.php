@@ -32,23 +32,23 @@
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        <?php foreach ($users as $user): ?>
+                                        @foreach($users as $user)
                                         <!-- Odd row -->
                                         <tr class="bg-white">
                                             <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                                                <?=$user->Id;?>
+                                                {{$user->id}}
                                             </td>
                                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                                <?=$user->Email;?>
+                                                {{$user->email}}
                                             </td>
                                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                                <?=$user->Name;?>
+                                                {{$user->name}}
                                             </td>
                                             <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                                 <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
                                             </td>
                                         </tr>
-                                        <?php endforeach; ?>
+                                        @endforeach
                                         </tbody>
                                     </table>
                                 </div>
